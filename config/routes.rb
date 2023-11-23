@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   # /users/sign_up /users/sign_in
   devise_for :users
 
