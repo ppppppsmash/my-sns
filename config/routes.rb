@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # /users/sign_up
+  # /users/sign_up /users/sign_in
   devise_for :users
 
   get 'home/index'
