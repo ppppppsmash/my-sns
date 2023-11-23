@@ -8,9 +8,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.1]
       t.string :encrypted_password, null: false, default: ""
 
       ## Custom User Data
-      t.string :full_name
-      t.string :username
-      t.string :phone_number
+      t.string :full_name, default: ""
+      t.string :username, default: ""
+      t.string :phone_number, default: ""
 
       ## Recoverable
       t.string   :reset_password_token
