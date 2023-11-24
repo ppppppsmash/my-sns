@@ -1,39 +1,49 @@
 <div id="<%= dom_id post %>">
-  <p>
-    <strong>Caption:</strong>
-    <%= post.caption %>
-  </p>
+  <div class="card" style="width: 25rem;">
+    <div class="card-header bg-white">
+      <div class="d-flex justify-content-between">
+        <div>
+          <% if post.user.profile_pic.attached? %>
+            <%= image_tag post.user.profile_pic, class: "img-thumbnail rounded-circle", style: "width: 10%" %>
+          <% else %>
+            <%= image_tag 'user.png', class: "img-thumbnail rounded-circle", style: "width: 10%" %>
+          <% end %>
 
-  <p>
-    <strong>Longitude:</strong>
-    <%= post.longitude %>
-  </p>
+          <span class="fw-bold mx-2"><%= post.user.username %></span>
+        </div>
 
-  <p>
-    <strong>Latitude:</strong>
-    <%= post.latitude %>
-  </p>
+        <div>
+          <div class="dropdown">
+            <a
+              class="text-dark"
+              style="text-decoration:none"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              ...
+            </a>
 
-  <p>
-    <strong>User:</strong>
-    <%= post.user_id %>
-  </p>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Edit post</a></li>
+              <li><a class="dropdown-item" href="#">Delete post</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
 
-  <p>
-    <strong>Allow comments:</strong>
-    <%= post.allow_comments %>
-  </p>
-
-  <p>
-    <strong>Show likes count:</strong>
-    <%= post.show_likes_count %>
-  </p>
-
-  <p>
-    <strong>Images:</strong>
-    <% post.images.each do |image| %>
-      <div><%= link_to image.filename, image %></div>
-    <% end %>
-  </p>
-
+      
+    </div>
+    <%= image_tag post.images.last, class: "card-img-top" %>
+    <div class="card-body">
+      <p class="card-text">
+        <%= post.caption %>
+      </p>
+    </div>
+    <div class="card-footer">
+      Featured
+    </div>
+  </div>
 </div>
