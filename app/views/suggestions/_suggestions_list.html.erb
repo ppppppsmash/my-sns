@@ -6,7 +6,9 @@
     <% end %>
   </div>
   
-  <div>
-    <%= render 'suggestions/suggestion' %>
+  <div class="d-flex flex-column gap-3 px-2">
+    <% (0..5).each do %>
+      <%= render 'suggestions/suggestion' %>
+    <% end %>
   </div>
 </div>

@@ -1,6 +1,10 @@
 <div class="d-flex justify-content-between">
-  <div>
-    <%= image_tag 'user.png', class: "img-thumbnail rounded-circle border border-2 border-primay", style: "width: 2.5rem" %>
+  <div class="d-flex">
+    <%= image_tag 'user.png', class: "img-thumbnail rounded-circle", style: "width: 2.5rem" %>
+    <div class="d-flex flex-column mx-2">
+      <small class="fw-bold" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 10rem">hello_world</small>
+      <small class="fw-bold text-muted" style="font-size:.7rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 10rem">Suggested for you by Instagram as He followed you before</small>
+    </div>
   </div>
 
   <%= link_to root_path, style: "text-decoration:none" do %>
