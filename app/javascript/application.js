@@ -2,3 +2,7 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import "bootstrap"
+
+// https://pqina.nl/filepond/docs/getting-started/installation/javascript/
+import "filepond"
+import "custom/custom"

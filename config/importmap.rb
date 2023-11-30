@@ -9,3 +9,5 @@ pin_all_from "app/javascript/controllers", under: "controllers"
 # https://getbootstrap.com/docs/5.3/getting-started/download/
 pin "bootstrap", to: "https://ga.jspm.io/npm:bootstrap@5.3.2/dist/js/bootstrap.esm.js"
 pin "@popperjs/core", to: "https://unpkg.com/@popperjs/core@2.11.6/dist/esm/index.js"
+pin "filepond", to: "https://ga.jspm.io/npm:filepond@4.30.4/dist/filepond.js"
+pin_all_from "app/javascript/custom", under: "custom"
