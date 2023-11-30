@@ -6,3 +6,5 @@ import "bootstrap"
 // https://pqina.nl/filepond/docs/getting-started/installation/javascript/
 import "filepond"
 import "custom/custom"
+// https://pqina.nl/filepond/docs/api/plugins/image-preview/
+import "filepond-plugin-image-preview"
