@@ -8,3 +8,5 @@ import "filepond"
 import "custom/custom"
 // https://pqina.nl/filepond/docs/api/plugins/image-preview/
 import "filepond-plugin-image-preview"
+// https://pqina.nl/filepond/docs/api/plugins/file-validate-type/
+import "filepond-plugin-file-validate-type"
