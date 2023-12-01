@@ -4,17 +4,24 @@ import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
 import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
 
 // Register the plugin
-FilePond.registerPlugin(FilePondPluginImagePreview, FilePondPluginFileValidateType);
+document.addEventListener('turbo:load', loadFilePond);
 
-// Get a reference to the file input element
-const inputElement = document.querySelector('#post-images');
-
-// Create a FilePond instance
-// https://pqina.nl/filepond/docs/api/instance/properties/
-const pond = FilePond.create(inputElement, {
-  credits: {},
-  storeAsFile: true,
-  allowMultiple: true,
-  allowReorder: true,
-  acceptedFileTypes: ['image/*'],
-});
+function loadFilePond() {
+  FilePond.registerPlugin(
+    FilePondPluginImagePreview,
+    FilePondPluginFileValidateType
+  );
+  
+  // Get a reference to the file input element
+  const inputElement = document.querySelector('#post-images');
+  
+  // Create a FilePond instance
+  // https://pqina.nl/filepond/docs/api/instance/properties/
+  const pond = FilePond.create(inputElement, {
+    credits: {},
+    storeAsFile: true,
+    allowMultiple: true,
+    allowReorder: true,
+    acceptedFileTypes: ['image/*'],
+  });
+}

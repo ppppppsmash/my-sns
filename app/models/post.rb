@@ -3,4 +3,6 @@ class Post < ApplicationRecord
 
   # https://railsguides.jp/active_storage_overview.html
   has_many_attached :images
+
+  validates :images, presence: true, blob: { content_type: :image } 
 end
