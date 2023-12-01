@@ -49,6 +49,9 @@ gem "bootstrap", "~> 5.3.2"
 
 gem "font-awesome-sass", "~> 6.4.2"
 
+# https://github.com/aki77/activestorage-validator
+gem "activestorage-validator"
+
 
 # https://github.com/heartcombo/devise
 # https://plog.kobacchi.com/rails7-devise-responded-to-turbo/
